@@ -12,10 +12,10 @@ TEMPLATE = app
 DEFINES += QT_DEPRECATED_WARNINGS
 
 CONFIG += c++11
-CONFIG += silent warn_on shared_and_static
+CONFIG += silent warn_on
 
 # library for theme
-unix:!macx: LIBS += -lcprime
+unix:!macx: LIBS += /usr/lib/libcprime.a
 
 FORMS += \
     corepad.ui
