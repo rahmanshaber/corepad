@@ -28,7 +28,7 @@ along with this program; if not, see {http://www.gnu.org/licenses/}. */
 #include <QWidget>
 #include <QCloseEvent>
 
-#include "utilities.h"
+#include <cprime/utilities.h>
 //#include "bookmarks/bookmarks.h"
 #include "coreedit.h"
 

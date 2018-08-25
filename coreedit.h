@@ -24,7 +24,7 @@ along with this program; if not, see {http://www.gnu.org/licenses/}. */
 #include <QPainter>
 #include <QTextBlock>
 
-#include "utilities.h"
+#include <cprime/utilities.h>
 
 
 class coreedit : public QPlainTextEdit
