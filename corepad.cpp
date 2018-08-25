@@ -23,7 +23,7 @@ corepad::corepad(QWidget *parent) : QWidget(parent), ui(new Ui::corepad)
     ui->setupUi(this);
 
     // set stylesheet from style.qrc
-    setStyleSheet(Utilities::getStylesheetFileContent(":/appStyle/style/CorePad.qss"));
+    setStyleSheet(Utilities::getStylesheetFileContent(Utilities::StyleAppName::CorePadStyle));
 
     // set window size
     int x = static_cast<int>(Utilities::screensize().width()  * .8);
@@ -162,8 +162,8 @@ bool corepad::closeTab(int index)
         QString msg = QString("This file contains unsaved changes.\nHow would you like to proceed?");
         QMessageBox message(QMessageBox::Question, QString("Save Changes - \"%1\"").arg(currentFilePath(index)), msg,
                                           QMessageBox::Cancel | QMessageBox::Discard | QMessageBox::Save, this);
-        message.setWindowIcon(QIcon(":/app/icons/app-icons/CoreFM.svg"));
-        message.setStyleSheet(Utilities::getStylesheetFileContent(":/appStyle/style/Dialog.qss"));
+        message.setWindowIcon(QIcon(":/icons/CorePad.svg"));
+        message.setStyleSheet(Utilities::getStylesheetFileContent(Utilities::StyleAppName::DialogStyle));
 
         int reply = message.exec();
 
@@ -421,7 +421,9 @@ void corepad::on_bookMarkIt_clicked()
             Utilities::messageEngine("File Not saved.", Utilities::MessageType::Warning);
             return;
         }
-//        GlobalFunc::appEngines("BookMarkIt",workFilePath);
+
+        bookmarkDialog bk;
+        bk.callBookMarkDialog(this,workFilePath);
     }
 }
 

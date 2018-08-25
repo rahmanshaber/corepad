@@ -29,7 +29,7 @@ along with this program; if not, see {http://www.gnu.org/licenses/}. */
 #include <QCloseEvent>
 
 #include <cprime/utilities.h>
-//#include "bookmarks/bookmarks.h"
+#include <cprime/bookmarkdialog.h>
 #include "coreedit.h"
 
 
