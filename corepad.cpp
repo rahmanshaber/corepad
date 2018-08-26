@@ -506,8 +506,8 @@ void corepad::on_search_clicked()
     }
 }
 
-void corepad::sendFiles(const QStringList &paths) {
-    qDebug() << paths;
+void corepad::sendFiles(const QStringList &paths)
+{
     if (paths.count()) {
         foreach (QString str, paths) {
             openText(Utilities::checkIsValidFile(str));
