@@ -2,7 +2,7 @@
 Name=CorePad
 Comment=CorePad is document editor app from CoreApps.
 Exec=corepad %F
-Icon=/usr/share/icons/CoreApps/CorePad.svg
+Icon=/usr/share/coreapps/icons/CorePad.svg
 Type=Application
 Categories=Utility;TextEditor;Viewer;Qt;Utility;
 Terminal=false
