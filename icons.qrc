@@ -17,5 +17,7 @@
         <file>icons/undo.svg</file>
         <file>icons/save.svg</file>
         <file>icons/close.svg</file>
+        <file>icons/down.svg</file>
+        <file>icons/up.svg</file>
     </qresource>
 </RCC>
