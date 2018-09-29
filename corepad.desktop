@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=CorePad
+Comment=CorePad is document editor app from CoreApps.
+Exec=corepad %F
+Icon=/usr/share/coreapps/icons/corepad.svg
+Type=Application
+Categories=Utility;Qt;TextEditor;Viewer;
+Terminal=false
+StartupNotify=true

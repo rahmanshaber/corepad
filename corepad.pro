@@ -58,10 +58,10 @@ unix {
         target.path = $$BINDIR
 
         desktop.path = $$PREFIX/share/applications/
-        desktop.files = "CorePad.desktop"
+        desktop.files = "corepad.desktop"
 
         icons.path = $$PREFIX/share/coreapps/icons/
-        icons.files = icons/CorePad.svg
+        icons.files = icons/corepad.svg
 
         INSTALLS += target icons desktop
 }

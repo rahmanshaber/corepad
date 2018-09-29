@@ -1,7 +1,7 @@
 # CorePad
 An app of CoreApps family.CorePad is document editor app.
 
-<img src="CorePad.png" width="500">
+<img src="corepad.png" width="500">
 
 ### Download
 
