@@ -162,7 +162,7 @@ bool corepad::closeTab(int index)
         QString msg = QString("This file contains unsaved changes.\nHow would you like to proceed?");
         QMessageBox message(QMessageBox::Question, QString("Save Changes - \"%1\"").arg(currentFilePath(index)), msg,
                                           QMessageBox::Cancel | QMessageBox::Discard | QMessageBox::Save, this);
-        message.setWindowIcon(QIcon(":/icons/CorePad.svg"));
+        message.setWindowIcon(QIcon(":/icons/corepad.svg"));
         message.setStyleSheet(Utilities::getStylesheetFileContent(Utilities::StyleAppName::DialogStyle));
 
         int reply = message.exec();
