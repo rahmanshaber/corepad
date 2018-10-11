@@ -59,7 +59,6 @@ int main(int argc, char *argv[])
 
     const QString files = "[FILE1, FILE2,...]";
     parser.addPositionalArgument("files", files, files);
-
     parser.process(app);
 
     QStringList args = parser.positionalArguments();
