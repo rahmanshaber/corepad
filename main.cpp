@@ -21,7 +21,6 @@ along with this program; if not, see {http://www.gnu.org/licenses/}. */
 #include <QStyleFactory>
 #include <QCommandLineParser>
 
-#include <cprime/utilities.h>
 #include <cprime/settingsmanage.h>
 
 

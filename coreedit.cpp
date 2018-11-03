@@ -24,7 +24,7 @@ coreedit::coreedit(QString fPath, QWidget *parent) : QPlainTextEdit(parent)
 
     cHighlighter *highlighter = new cHighlighter(document());
     highlighter->setObjectName("cHighlighter");
-    QString bcolor(Utilities::getStylesheetValue()->value("@color01").toString());
+    QString bcolor(CPrime::ThemeFunc::getStyleSheet()->value("@color01").toString());
     setStyleSheet("QWidget{background-color: " + bcolor + "; border: none;} QMenu{border: 1px solid gray;}");
 
     lineNumberArea = new LineNumberArea(this);
@@ -32,7 +32,7 @@ coreedit::coreedit(QString fPath, QWidget *parent) : QPlainTextEdit(parent)
     //this->lineNumberArea->setMinimumWidth(20);
 
     // Setting the CoreEdit background
-    QString color(Utilities::getStylesheetValue()->value("@color01").toString());
+    QString color(CPrime::ThemeFunc::getStyleSheet()->value("@color01").toString());
     QPalette p = palette();
     p.setColor(QPalette::Text, "#B9A388");  //Text color set to white.
     p.setColor(QPalette::Active, QPalette::Base, color);  //Active base color black.
@@ -105,7 +105,7 @@ void coreedit::highlightCurrentLine()
 void coreedit::lineNumberAreaPaintEvent(QPaintEvent *event)
 {
     QPainter painter(lineNumberArea);
-    painter.fillRect(event->rect(), QColor(Utilities::getStylesheetValue()->value("@color06").toString()));
+    painter.fillRect(event->rect(), QColor(CPrime::ThemeFunc::getStyleSheet()->value("@color06").toString()));
 
     QTextBlock block = firstVisibleBlock();
     int blockNumber = block.blockNumber();
@@ -115,7 +115,7 @@ void coreedit::lineNumberAreaPaintEvent(QPaintEvent *event)
     while (block.isValid() && top <= event->rect().bottom()) {
         if (block.isVisible() && bottom >= event->rect().top()) {
             QString number = QString::number(blockNumber + 1);
-            painter.setPen(Utilities::getStylesheetValue()->value("@color07").toString());
+            painter.setPen(CPrime::ThemeFunc::getStyleSheet()->value("@color07").toString());
             painter.drawText(-1, top, lineNumberArea->width() + 3, fontMetrics().height() + 2, Qt::AlignRight, number + " ");
         }
 

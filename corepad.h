@@ -17,6 +17,8 @@ along with this program; if not, see {http://www.gnu.org/licenses/}. */
 #ifndef COREPAD_H
 #define COREPAD_H
 
+#include "coreedit.h"
+
 #include <QFile>
 #include <QFileDialog>
 #include <QShortcut>
@@ -28,9 +30,8 @@ along with this program; if not, see {http://www.gnu.org/licenses/}. */
 #include <QWidget>
 #include <QCloseEvent>
 
-#include <cprime/utilities.h>
+#include <cprime/themefunc.h>
 #include <cprime/bookmarkdialog.h>
-#include "coreedit.h"
 
 
 namespace Ui {
